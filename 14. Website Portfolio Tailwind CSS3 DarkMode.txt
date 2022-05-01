@@ -1,0 +1,29 @@
+Link Videonya : https://www.youtube.com/watch?v=k51PlNVTuAo&list=PLFIM0718LjIUHFRMzPJ0wGjx9_NlC5d1h&index=14
+
+Website panduan installationnya ada di : 
+https://tailwindcss.com/docs/installation
+
+Notes : 
+Misalnya kalau ada nilai class yg kita mau pakai tapi nd sesuai dgn yg di sediakan oleh tailwindCSS, ada 2 option kita bisa buat kalau mau pakai nilai itu. Pertama, tambahkan di file tailwind.config.js dan yg kedua yaitu dgn pakai arbitrary values. Cthnya saya mau buat margin top dgn size nya 42px dan warna bg colornya salmon, maka kita bisa tulis gini : 
+	<div class="bg-[salmon] mt-[42px]"></div>
+artinya kita buat valuenya sendiri, dgn taruh di dalam kurung siku buka dan tutup atau yg kita kenal dgn sebutan arbitrary values.
+
+-) Ada 2 third party module yg bisa kita install dari npm, yg dpt membantu kita dalam ngoding pake tailwind css, yaitu : 
+	1. Prettier, docsnya ada di : https://www.npmjs.com/package/prettier
+	   Tinggal ketik npm i -D prettier lalu enter, maka nnti semua code nya kita itu kalau ada nd simetris dia akan rapikan gitu.
+	2. Prettier Plugin Tailwind, docsnya ada di : https://www.npmjs.com/package/prettier-plugin-tailwind
+	   Tinggal ketik npm i prettier-plugin-tailwind lalu enter, maka modules ini memungkinkan kita untuk menggunakan prettier dgn tailwindCSS, sehingga code kita menjadi lebih 	   rapi jika coding dgn tailwindCSS.
+
+-) Untuk Minify file CSS yg kita pakai, supaya sizenya lbh kecil dan ringan pas di load user, maka ketik perintah : 
+	npx tailwindcss -i ./src/input.css -o ./dist/css/final.css --minify
+Lalu enter dan tailwindcss akan buatkan file css baru yg sdh di minify dari file input.css lalu di compile dan di minify menjadi file final.css yang berada di dalam folder dist/css. Dan kita tinggal hubungkan file css baru itu ke file html yg kita punya. Docsnya di : 
+	https://tailwindcss.com/docs/optimizing-for-production
+Atau search saja (control+k) optimizing for production.
+
+-) 
+ 
+
+
+
+
+	  

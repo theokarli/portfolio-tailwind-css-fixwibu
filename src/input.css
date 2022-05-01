@@ -1,0 +1,44 @@
+/* Jadi, tailwind sebelum dijalankan, dia akan melewati file css yg ini dlu untuk menjalankan 3 layers of tailwind yg ada di bawah ini, sebelum nantinya akan dibuat sebuah file css baru yg nanti file itu, merupakan file css yg akan dipakai di web kita atau istilahnya input css di compile menjadi css baru untk kita pakai di web kita */
+
+/* tailwind base itu artinya tailwind menjalankan preflight untk kasih CSS reset ke semua komponen yg kita punya */
+@tailwind base; 
+
+/* tailwind components itu artinya tailwind minta component ke librarynya, kyk sistem container, grid, dan dll */
+@tailwind components;
+
+/* tailwind utilities itu artinya tailwind akan memanggil class" untilities untk nnti bisa kita pakai gitue */
+@tailwind utilities;
+
+/* Ksh tau tailwind CSS, supaya wktu compile nanti seluruh elemen dlm body kasih pakai font family inter dan kalau nd ada kasih pakai font family sans-serif */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Ksh tau tailwind css, bahwa kita mau buat class custom namanya navbar-fixed, tapi dgn pakai class" untilities dari tailwind css */
+.navbar-fixed {
+    @apply fixed z-[9999] bg-white bg-opacity-60 backdrop-blur-sm dark:bg-dark dark:bg-opacity-50;
+    box-shadow: inset 0 -2px 0 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Ksh tau tailwind css, bahwa kita mau buat class custom namanya hamburger-line, tapi dgn pakai class" untilities dari tailwind css */
+.hamburger-line {
+    @apply w-[30px] h-[2px] my-2 block bg-dark dark:bg-white;
+}
+
+/* Ksh tau tailwind css, bahwa kita mau buat class custom namanya hamburger-active, tapi dgn pakai class" untilities dari tailwind css */
+.hamburger-active > span:nth-child(1) {
+    @apply origin-top-left rotate-45;
+}
+
+.hamburger-active > span:nth-child(2) {
+    @apply scale-0;
+}
+
+.hamburger-active > span:nth-child(3) {
+    @apply origin-bottom-left -rotate-45;
+}
+
+/* Ksh tau tailwind css, bahwa kita mau buat class custom, tapi dgn pakai class" untilities dari tailwind css */
+#dark-toggle:checked ~ label div.toggle-circle {
+    @apply translate-x-3;
+}
